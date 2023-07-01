@@ -376,13 +376,29 @@
 
       <form action="/success" method="post">
 
-        <input type="text" placeholder="Name" class="box" name="name">
-        <input type="email" placeholder="Email" class="box" name="email">
-        <input type="text" placeholder="Project name" class="box" name="project_name">
-        <input type="text" placeholder="Your message" class="box" name="message">
+        <input type="text" placeholder="Name" class="box" name="name" id="name">
+        <input type="email" placeholder="Email" class="box" name="email" id="email">
+        <input type="text" placeholder="Project name" class="box" name="project_name" id="project_name">
+        <input type="text" placeholder="Your message" class="box" name="message" id="message">
         <!-- <textarea name="" id="" cols="30" rows="10" class="box message" placeholder="Your message" name="message"></textarea> -->
-        <button type="submit" class="btn">Send <i class="fas fa-paper-plane"></i></button>
+        <button type="submit" class="btn" id="btn">Send <i class="fas fa-paper-plane"></i></button>
       </form>
+
+      <script>
+        const btn = document.getElementById('btn')
+        btn.onclick = () => {
+          const name = document.getElementById('name').value
+          const email = document.getElementById('email').value
+          const project_name = document.getElementById('project_name').value
+          const message = document.getElementById('message').value
+          if (name === "" || email === "" || project_name === "" || message === "") {
+            return alert('The data is not completely filled! ===> Məlumatlar tam doldurulmayıb')
+          } else {
+            alert('The information is completely filled ===> Məlumatlar tam dolduruldu ')
+          }
+        }
+      </script>
+
 
     </div>
 

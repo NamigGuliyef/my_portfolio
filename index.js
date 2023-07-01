@@ -27,34 +27,38 @@ app.get('/success', (req, res) => {
 // send message
 app.post('/success', async (req, res) => {
   const { name, email, project_name, message } = req.body
-  await userModel.create({name, email, project_name, message})
-  // gmail information
-  let mailTransporter = nodemailer.createTransport({
-    service: "gmail",
-    port: 587,
-    auth: {
-      user: "quliyevnamiq8@gmail.com",
-      pass: "vwwgaysbferftezu"
-    }
-  })
+  if (name === "" || email === "" || project_name === "" || message === "") {
+    return res.redirect('/')
+  } else {
+    await userModel.create({ name, email, project_name, message })
+    // gmail information
+    let mailTransporter = nodemailer.createTransport({
+      service: "gmail",
+      port: 587,
+      auth: {
+        user: "quliyevnamiq8@gmail.com",
+        pass: "vwwgaysbferftezu"
+      }
+    })
 
-  // message details
-  let details = {
-    from: "quliyevnamiq8@gmail.com",
-    to: "quliyevnamiq8@gmail.com",
-    subject: `${project_name}`,
-    html: ` <h3> Müraciət edən email adresi : ${email} </h3>
+    // message details
+    let details = {
+      from: "quliyevnamiq8@gmail.com",
+      to: "quliyevnamiq8@gmail.com",
+      subject: `${project_name}`,
+      html: ` <h3> Müraciət edən email adresi : ${email} </h3>
             <h3> Müraciət edən şəxs : ${name} </h3><br>
             <h4> Məlumat mesajı : ${message}</h4> `
-  }
-
-  // message sending
-  mailTransporter.sendMail(details, (err) => {
-    if (err) {
-      return res.status(400).send({ success: false, error: err.message });
     }
-    return res.redirect('/success')
-  })
+
+    // message sending
+    mailTransporter.sendMail(details, (err) => {
+      if (err) {
+        return res.status(400).send({ success: false, error: err.message });
+      }
+      return res.redirect('/success')
+    })
+  }
 })
 
 app.listen(7002, () => console.log('server is up...'))
