@@ -2,422 +2,987 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> My Portfolio | Guliyev Namig </title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guliyev Namig - Portfolio Website</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon" />
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+
+  <!--
+    - google font link
+  -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
 </head>
 
 <body>
+  <!--
+    - #MAIN
+  -->
 
-  <!------  Header section-->
+  <main>
+    <!--
+      - #SIDEBAR
+    -->
 
-  <header>
-    <div class="user">
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar-info">
+        <figure class="avatar-box">
+          <img src="./assets/images/profile_photo_anime.jpg" alt="Guliyev Namig" width="80" />
+        </figure>
 
-      <div class="user">
-        <img src="images/pic.png" alt="">
-        <h3 class="name">Guliyev Namig</h3>
-        <p class="post">Backend developer</p>
+        <div class="info-content">
+          <h1 class="name" title="Richard hanrick">Guliyev Namig</h1>
 
-        <div class="social-icons">
-          <a href="https://www.linkedin.com/in/namig-guliyev/"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="https://tttttt.me/nguliyef"><i class="fa-brands fa-telegram"></i></a>
-          <a href="https://api.whatsapp.com/send?phone=994559533073"><i class="fa-brands fa-whatsapp"></i></a>
-          <a href="https://github.com/NamigGuliyef"><i class="fa-brands fa-github"></i></a>
+          <p class="title">Node js Backend Developer</p>
         </div>
 
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
       </div>
+
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:quliyevnamiq8@gmail.com" class="contact-link">quliyevnamiq8@gmail.com</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="https://api.whatsapp.com/send?phone=994559533073" class="contact-link">+994559533073;
+                +994773337479</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="">January 04, 1993</time>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Azerbaijan/Baku-Nizami</address>
+            </div>
+          </li>
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/namig-guliyev/" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://api.whatsapp.com/send?phone=994559533073" class="social-link">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://github.com/NamigGuliyef" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </aside>
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+      <!--
+        - #NAVBAR
+      -->
 
       <nav class="navbar">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <button class="navbar-link active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          <!-- <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Blog</button>
+          </li> -->
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
         </ul>
       </nav>
-  </header>
 
+      <!--
+        - #ABOUT
+      -->
 
-  <div id="menu" class="fas fa-bars"></div>
+      <article class="about active" data-page="about">
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
 
-  <!--- home  section-->
+        <section class="about-text">
+          <p>
+            <img src="assets/images/azerbaijan-flag.svg"><strong>AZE :</strong> Salam, mən Quliyev Namiq. Bakıda
+            yaşayıram. Node js
+            Backend Developerəm. Akademiyanı bu sahə üzrə fərqlənmə diplomu ilə bitirmişəm. Təcrübə proqramında iştirak
+            etdim. İndi iş həyatına
+            addımlar atmaq istəyirəm.Artıq 6 ay müddətində 3 lahiyə üzərində çalışmışam. Siz startap və freelance işlərə
+            dəvət edə bilərsiniz. Portfeldə hər şey daha
+            aydın ifadə olunub. Səhifəni nəzərdən keçirərdiniz.
+          </p>
 
-  <section class="home" id="home">
+          <p>
+            <img src="assets/images/icons8-united-states-22.png"><strong> ENG :</strong> Hello, I'm Namig Guliyev. I'm
+            living in Baku. I am Node js Backend Developer. I graduated from the Academy with honors in this field. I
+            participated in the internship program. Now I want to take steps in business life. I have already worked on
+            3 projects for 6 months. You can invite startups and freelance jobs. Everything is more clearly stated in
+            the portfolio. You would review the page.
+          </p>
+        </section>
 
-    <h3>HI THERE</h3>
-    <h1>I'M<span> Guliyev Namig</span></h1>
-    <p><img src="img/united-states-25.png"><strong> ENG : </strong>I'm living in Baku. I have been working as a
-      warehouseman
-      for 8 years. During this time, I became very interested
-      in this field. I studied Node Js Backend Developer at Jed Academy. After the end of the study period, I
-      participated in a 1-month internship program. I am currently working on 1 project. I can help you write the
-      backend (the invisible side of websites) of websites. You can invite startups and freelancers. Everything is shown
-      more clearly in the portfolio. Please take a look at the page.
-    </p>
-    <p><img src="img/azerbaijan-flag.svg"><strong> AZE : </strong>Mən Bakıda yaşayıram. 8 ildir anbardar işləyirəm. Bu
-      müddət
-      ərzində məndə bu sahəyə böyük maraq yarandı. Mən Jed Akademiyasında Node Js Backend Developer təhsili almışam.
-      Təhsil müddəti bitdikdən sonra 1 aylıq təcrübə proqramında iştirak etdim. Hazırda 1 layihə üzərində işləyirəm. Mən
-      sizə vebsaytların backendini (veb-saytların görünməyən tərəfi) yazmağa kömək edə bilərəm. Siz startapları və
-      frilanserləri dəvət edə bilərsiniz. Portfeldə hər şey daha aydın göstərilib. Zəhmət olmasa səhifəyə nəzər salın.
-    </p>
-    <a href="#about"><button class="btn">About me <i class="fas fa-user"></i></button></a>
-  </section>
+        <!--
+          - service
+        -->
+        <!-- 
+        <section class="service">
+          <h3 class="h3 service-title">What i'm doing</h3>
 
-  <!--- about section-->
+          <ul class="service-list">
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg
+                " alt="design icon" width="40" />
+              </div>
 
-  <section class="about" id=about>
-    <h1 class="heading"><span>About</span> Me </h1>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web design</h4>
 
-    <div class="row">
+                <p class="service-item-text">
+                  The most modern and high-quality design made at a
+                  professional level.
+                </p>
+              </div>
+            </li>
 
-      <div class="info">
-        <h3><span> Fullname : </span> Guliyev Namig </h3>
-        <h3><span> Birthday : </span> 04 January 1993 </h3>
-        <h3><span> Age : </span> 30 </h3>
-        <h3><span> Place of birth : </span> City of Jizzakh,Republic of Uzbekistan </h3>
-        <h3><span> Degree : </span> Intern </h3>
-        <h3><span> Email : </span> quliyevnamiq8@gmail.com </h3>
-        <h3><span> City : </span> Azerbaijan/Baku, Nizami district </h3>
-        <h3><span> Position : </span> Node JS Backend Developer </h3>
-        <h3><span> Language : </span> Azerbaijan </h3>
-        <h3><span> Family status : </span> Married </h3>
-        <a href="https://drive.google.com/file/d/15MeVyuSVUeoTAQzkNBto7YCrT6MLkfem/view"><button class="btn"> Download
-            CV <i class="fas fa-download"></i></button></a>
-        <a href="https://drive.google.com/file/d/15T_dznDbFdSM7LzXeoM6tuPJLhlts8ip/view"><button class="btn"> Download
-            Certificate <i class="fas fa-download"></i></button></a>
-      </div>
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40" />
+              </div>
 
-      <div class="counter">
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web development</h4>
 
-        <div class="box">
-          <span>0</span>
-          <h3>years of experience</h3>
+                <p class="service-item-text">
+                  High-quality development of sites at the professional level.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40" />
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Mobile apps</h4>
+
+                <p class="service-item-text">
+                  Professional development of applications for iOS and
+                  Android.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40" />
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Photography</h4>
+
+                <p class="service-item-text">
+                  I make high-quality photos of any category at a professional
+                  level.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </section> -->
+
+        <!--
+          - testimonials
+        -->
+        <!-- 
+        <section class="testimonials">
+          <h3 class="h3 testimonials-title">Testimonials</h3>
+
+          <ul class="testimonials-list has-scrollbar">
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar />
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>
+                  Daniel lewis
+                </h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Bhanuprakash was hired to create a corporate identity. We
+                    were very pleased with the work done. She has a lot of
+                    experience and is very concerned about the needs of
+                    client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing elit, seds do et eiusmod tempor
+                    incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar />
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>
+                  Jessica miller
+                </h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Bhanuprakash was hired to create a corporate identity. We
+                    were very pleased with the work done. She has a lot of
+                    experience and is very concerned about the needs of
+                    client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing elit, seds do et eiusmod tempor
+                    incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar />
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>
+                  Emily evans
+                </h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Bhanuprakash was hired to create a corporate identity. We
+                    were very pleased with the work done. She has a lot of
+                    experience and is very concerned about the needs of
+                    client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing elit, seds do et eiusmod tempor
+                    incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar />
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>
+                  Henry william
+                </h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Bhanuprakash was hired to create a corporate identity. We
+                    were very pleased with the work done. She has a lot of
+                    experience and is very concerned about the needs of
+                    client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing elit, seds do et eiusmod tempor
+                    incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section> -->
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img />
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon" />
+            </div>
+
+            <div class="modal-content">
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+              <time datetime="2021-06-14">14 June, 2021</time>
+
+              <div data-modal-text>
+                <p>
+                  Richard was hired to create a corporate identity. We were
+                  very pleased with the work done. She has a lot of experience
+                  and is very concerned about the needs of client. Lorem ipsum
+                  dolor sit amet, ullamcous cididt consectetur adipiscing
+                  elit, seds do et eiusmod tempor incididunt ut laborels
+                  dolore magnarels alia.
+                </p>
+              </div>
+            </div>
+          </section>
         </div>
 
-        <div class="box">
-          <span>1</span>
-          <h3>project completed</h3>
-        </div>
+        <!--
+          - clients
+        -->
+        <!-- 
+        <section class="clients">
+          <h3 class="h3 clients-title">Clients</h3>
 
-        <div class="box">
-          <span>1</span>
-          <h3>happy clients</h3>
-        </div>
+          <ul class="clients-list has-scrollbar">
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/Black and White Monogram Business Logo-fotor-bg-remover-2024010522535.png" alt="client logo" />
+              </a>
+            </li>
 
-        <div class="box">
-          <span>24/7</span>
-          <h3>hours of support</h3>
-        </div>
-      </div>
+    
+           
+          </ul>
+        </section> -->
+      </article>
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">
+                JED Academy
+              </h4>
+
+              <span>2022 - 2023</span>
+
+              <p class="timeline-text">
+                I studied Backend Node js Developer. I graduated with distinction. I participated in the internal
+                internship program of the Academy.
+              </p>
+            </li>
+
+
+          </ol>
+        </section>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Web developer</h4>
+
+              <span>2023/June — Present</span>
+
+              <p class="timeline-text">
+                I work as a backend developer in start-up and experimental projects. Currently, I am working on a travel
+                company project.
+              </p>
+            </li>
+
+          </ol>
+        </section>
+
+        <section class="skill">
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Javascript</h5>
+                <data value="60">60%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 60%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Node JS</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Express JS</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">GraphQL</h5>
+                <data value="50">50%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Typescript</h5>
+                <data value="50">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Nest JS</h5>
+                <data value="50">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Mongo DB</h5>
+                <data value="50">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Github</h5>
+                <data value="50">60%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 60%"></div>
+              </div>
+            </li>
+
+          </ul>
+        </section>
+
+        <!-- Packages -->
+
+        <section class="skill">
+          <h3 class="h3 skills-title">Packages</h3>
+
+          <ul class="skills-list content-card">
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">JWT(Jsonwebtoken)</h5>
+                <data value="60">100%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 100%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Bcrypt</h5>
+                <data value="100">100%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 100%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Nodemon</h5>
+                <data value="100">100%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 100%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Nodemailer</h5>
+                <data value="90">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Google Auth</h5>
+                <data value="50">50%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Stripe</h5>
+                <data value="50">50%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%"></div>
+              </div>
+            </li>
+
+      </article>
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+          <ul class="filter-list">
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Blog</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>E-commerce</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+            <button class="filter-select" data-select>
+              <div class="select-value" data-selecct-value>
+                Select category
+              </div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+            </button>
+
+            <ul class="select-list">
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Blog</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>E-commerce</button>
+              </li>
+
+
+            </ul>
+          </div>
+
+          <ul class="project-list">
+            <li class="project-item active" data-filter-item data-category="blog">
+              <a href="https://excel-world.vercel.app/">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/excel-world.png" alt="finance" loading="lazy" />
+                </figure>
+
+                <h3 class="project-title">Excel-World</h3>
+
+                <p class="project-category">Blog</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="e-commerce">
+              <a href="https://outdorr-namig.vercel.app/">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/outdorr.png" alt="orizon" loading="lazy" />
+                </figure>
+
+                <h3 class="project-title">Outdorr</h3>
+
+                <p class="project-category">E-commerce</p>
+              </a>
+            </li>
+
+          </ul>
+        </section>
+      </article>
+
+      <!--
+        - #BLOG
+      -->
+      <!-- 
+      <article class="blog" data-page="blog">
+        <header>
+          <h2 class="h2 article-title">Blog</h2>
+        </header>
+
+        <section class="blog-posts">
+          <ul class="blog-posts-list">
+            <li class="blog-post-item">
+              <a href="#">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy" />
+                </figure>
+
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">
+                    Design conferences in 2022
+                  </h3>
+
+                  <p class="blog-text">
+                    Created this blog for design conference in 2022.
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy" />
+                </figure>
+
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">
+                    Best fonts every designer
+                  </h3>
+
+                  <p class="blog-text">
+                    Blog created for developers and designer to give best
+                    fonts for their projects.
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy" />
+                </figure>
+
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design digest #80</h3>
+
+                  <p class="blog-text">
+                    This blog for designers to improve their creativity.
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy" />
+                </figure>
+
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">
+                    UI interactions of the week
+                  </h3>
+
+                  <p class="blog-text">
+                    This blog about best ui interactions developed in the
+                    week.
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy" />
+                </figure>
+
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">
+                    The forgotten art of spacing
+                  </h3>
+
+                  <p class="blog-text">
+                    Blog is for creators The importence of spacing in design
+                    proffesion.
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy" />
+                </figure>
+
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design digest #79</h3>
+
+                  <p class="blog-text">
+                    This blog for designers to improve their creativity.
+                  </p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </article> -->
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14451.273747132922!2d49.92683394791563!3d40.408716261112694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x403062e610a7facb%3A0x74cea4c0fbd5897!2sNizami%20rayonu%2C%20Bak%C4%B1!5e0!3m2!1saz!2saz!4v1704630739685!5m2!1saz!2saz"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="/success" class="form" data-form method="post">
+            <div class="input-wrapper">
+              <input type="text" placeholder="Fullname" class="form-input" name="name" id="name">
+              <input type="email" placeholder="Email" class="form-input" name="email" id="email">
+              <input type="text" placeholder="Project name" class="form-input" name="project_name" id="project_name">
+
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" id="message"></textarea>
+
+            <button class="form-btn" type="submit" id="btn">
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+          </form>
+
+
+          <script>
+            const btn = document.getElementById('btn')
+            btn.onclick = () => {
+              const name = document.getElementById('name').value
+              const email = document.getElementById('email').value
+              const project_name = document.getElementById('project_name').value
+              const message = document.getElementById('message').value
+              if (name === "" || email === "" || project_name === "" || message === "") {
+                return alert('The data is not completely filled! ===> Məlumatlar tam doldurulmayıb')
+              } else {
+                return alert('The information is completely filled ===> Məlumatlar tam dolduruldu ')
+              }
+            }
+          </script>
+
+
+        </section>
+      </article>
     </div>
+  </main>
 
-  </section>
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
 
-  <!-----Education section---->
-
-  <section class="education" id="education">
-
-    <h1 class="heading">My<span> Education</span></h1>
-
-    <div class="box-container">
-
-      <div class="box">
-        <i class="fas fa-graduation-cap"></i>
-        <span>2008 - 2011</span>
-        <h3>ACCOUNTING AND AUDITING</h3>
-        <p>Baku State Oil and Energy College</p>
-      </div>
-
-      <div class="box">
-        <i class="fas fa-graduation-cap"></i>
-        <span>2013</span>
-        <h3>THEORY OF ACCOUNTING AND 1C SOFTWARE</h3>
-        <p>Baku - Science and Learning Center</p>
-      </div>
-
-      <div class="box">
-        <i class="fas fa-graduation-cap"></i>
-        <span>2022 - 2023</span>
-        <h3>BACKEND NODE JS DEVELOPER</h3>
-        <p>Jed Academy</p>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-----Skills section --->
-
-  <section class="skills section" id="skills">
-    <h1 class="heading">My<span> Skills</span></h1>
-    <div class="divider"></div>
-    <div class="skills__container container grid section__border">
-
-
-      <div class="skills__content">
-        <h3 class="skills__title">
-          <p class="sub-para-skill">Backend Developer- Node JS</p>
-        </h3>
-        <div class="skills__info">
-
-          <div class="skills__data">
-            <div class="skills__blob">
-              <img src="img/javascript.svg" alt="skills image">
-            </div>
-            <h3 class="skills__name">Javascript</h3>
-          </div>
-
-          <div class="skills__data">
-            <div class="skills__blob">
-              <img src="img/nodejs.svg" alt="skills image">
-            </div>
-            <h3 class="skills__name">Node JS</h3>
-          </div>
-
-          <div class="skills__data">
-            <div class="skills__blob">
-              <img src="img/express.svg" alt="skills image">
-            </div>
-            <h3 class="skills__name">Express JS</h3>
-          </div>
-
-          <div class="skills__data">
-            <div class="skills__blob">
-              <img src="img/graphql.svg" alt="skills image">
-            </div>
-            <h3 class="skills__name">GraphQL</h3>
-          </div>
-
-          <div class="skills__data">
-            <div class="skills__blob">
-              <img src="img/typescript.svg" alt="skills image">
-            </div>
-            <h3 class="skills__name">Typescript</h3>
-          </div>
-
-          <div class="skills__data">
-            <div class="skills__blob">
-              <img src="img/mongodb.svg" alt="skills image">
-            </div>
-            <h3 class="skills__name">MongoDB</h3>
-          </div>
-
-          <div class="skills__data">
-            <div class="skills__blob">
-              <img src="img/github.svg" alt="skills image">
-            </div>
-            <h3 class="skills__name">Github</h3>
-          </div>
-
-          <div class="skills__data">
-            <div class="skills__blob">
-              <img src="img/excel.svg" alt="skills image">
-            </div>
-            <h3 class="skills__name">MS Excel</h3>
-          </div>
-
-          <div class="skills__data">
-            <div class="skills__blob">
-              <img src="img/word.svg" alt="skills image">
-            </div>
-            <h3 class="skills__name">MS Word</h3>
-          </div>
-
-          <div class="skills__data">
-            <div class="skills__blob">
-              <img src="img/outlook.svg" alt="skills image">
-            </div>
-            <h3 class="skills__name">MS Outlook</h3>
-          </div>
-
-          <div class="skills__data">
-            <div class="skills__blob">
-              <img src="img/1C_prog.png" alt="skills image">
-            </div>
-            <h3 class="skills__name">1C 8.3</h3><br>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="skills__content">
-        <h3 class="skills__title">
-          <p class="sub-para-skill">Packages</p>
-        </h3>
-        <div class="skills__info">
-
-          <div class="skills__data">
-            <div class="skills__blob">
-              <img src="img/jwtio-json-web-token.svg" alt="skills image">
-            </div>
-            <h3 class="skills__name">JWT</h3>
-          </div>
-
-          <div class="skills__data">
-            <div class="skills__blob">
-              <img src="img/bcrypt.png" alt="skills image">
-            </div>
-            <h3 class="skills__name">Bcrypt</h3>
-          </div>
-
-          <div class="skills__data">
-            <div class="skills__blob">
-              <img src="img/nodemon-svgrepo-com.svg" alt="skills image">
-            </div>
-            <h3 class="skills__name">Nodemon</h3>
-          </div>
-
-          <div class="skills__data">
-            <div class="skills__blob">
-              <img src="img/nodemailer.png" alt="skills image">
-            </div>
-            <h3 class="skills__name">Nodemailer</h3>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-----Portfolio section---->>
-
-  <section class="portfolio" id="portfolio">
-
-    <h1 class="heading">My<span> Portfolio</span></h1>
-
-    <div class="port-row">
-
-      <div class="port-item">
-        <div class="port-img">
-          <img src="images/e-commerce.jpg" alt="...">
-        </div>
-        <div class="port-info">
-          <h4>E-commerce store => albala.az</h4>
-          <p>The code of the backend part of the project</p>
-          <a href="https://github.com/NamigGuliyef/albala.az"><i class="fa-sharp fa-solid fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-      <div class="port-item">
-        <div class="port-img">
-          <img src="images/backend_node1.jpg" alt="...">
-        </div>
-        <div class="port-info">
-          <h4>Express JS</h4>
-          <p>Backend coding written in express js framework.</p>
-          <a href="https://github.com/NamigGuliyef/ExpressJS"><i class="fa-sharp fa-solid fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-      <div class="port-item">
-        <div class="port-img">
-          <img src="images/backend_node1.png" alt="...">
-        </div>
-        <div class="port-info">
-          <h4>Node JS</h4>
-          <p>Backend coding written in express js framework.</p>
-          <a href="https://github.com/NamigGuliyef/Node01-tasks"><i class="fa-sharp fa-solid fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-      <div class="port-item">
-        <div class="port-img">
-          <img src="images/graphQL.png" alt="...">
-        </div>
-        <div class="port-info">
-          <h4>Express JS</h4>
-          <p>Backend coding written in express js framework.</p>
-          <a href="https://github.com/NamigGuliyef/graphQL"><i class="fa-sharp fa-solid fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-
-      <div class="port-item">
-        <div class="port-img">
-          <img src="images/domain_az.jpg" alt="...">
-        </div>
-        <div class="port-info">
-          <h4>Express JS</h4>
-          <p>Domain purchase and sale (simple project)</p>
-          <a href="https://github.com/NamigGuliyef/domain_az"><i class="fa-sharp fa-solid fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!----Contact section---->
-
-  <section class="contact" id="contact">
-
-    <h1 class="heading">Contact<span> Me</span></h1>
-
-    <div class="row">
-      <div class="content">
-
-        <h3 class="title">contact info</h3>
-
-        <div class="info">
-          <h3><i class="fas fa-envelope"></i>quliyevnamiq8@gmail.com</h3>
-          <h3><i class="fas fa-phone"></i>+994 55 953 30 73 (whatsapp)</h3>
-          <h3><i class="fas fa-phone"></i>+994 77 333 74 79</h3>
-          <h3><i class="fas fa-map-marker-alt"></i>Baku, Nizami district / Nakhchivanski Street</h3>
-        </div>
-      </div>
-
-      <form action="/success" method="post">
-
-        <input type="text" placeholder="Name" class="box" name="name" id="name">
-        <input type="email" placeholder="Email" class="box" name="email" id="email">
-        <input type="text" placeholder="Project name" class="box" name="project_name" id="project_name">
-        <input type="text" placeholder="Your message" class="box" name="message" id="message">
-        <!-- <textarea name="" id="" cols="30" rows="10" class="box message" placeholder="Your message" name="message"></textarea> -->
-        <button type="submit" class="btn" id="btn">Send <i class="fas fa-paper-plane"></i></button>
-      </form>
-
-      <script>
-        const btn = document.getElementById('btn')
-        btn.onclick = () => {
-          const name = document.getElementById('name').value
-          const email = document.getElementById('email').value
-          const project_name = document.getElementById('project_name').value
-          const message = document.getElementById('message').value
-          if (name === "" || email === "" || project_name === "" || message === "") {
-            return alert('The data is not completely filled! ===> Məlumatlar tam doldurulmayıb')
-          } else {
-            alert('The information is completely filled ===> Məlumatlar tam dolduruldu ')
-          }
-        }
-      </script>
-
-
-    </div>
-
-  </section>
-
-
-  <!-----scroll top button-->
-
-  <a href="#home" class="top">
-    <img src="images/scroll_top.png" height="40" width="40" alt="">
-  </a>
-
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-  <script src="js/script.js"></script>
-
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
-
-
-
 
 </html>
