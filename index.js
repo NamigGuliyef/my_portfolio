@@ -28,6 +28,10 @@ app.get('/success', (req, res) => {
 })
 
 
+app.get('/cv', (req, res) => {
+  res.sendFile(path.resolve('./cv.html'))
+})
+
 // send message
 app.post('/success', async (req, res) => {
   const { name, email, project_name, message } = req.body
